@@ -1,7 +1,7 @@
 base_url = "https://electronstudio.co.uk"
-title = "Richard Smith"
+title = "Digital Makers"
 description = "YOUR_SITE_DESCRIPTION"
-author = "Richard Smith"
+author = "Digital Makers"
 theme = "tabi"
 generate_feeds = true
 compile_sass = true
@@ -44,6 +44,11 @@ error_on_missing_language = true
 # Use sans-serif font everywhere.
 # By default, the serif font is only used in articles.
 override_serif_with_sans = false
+
+# Disable tabi's built-in Inter glyph subset, which is preloaded for the site header.
+# The site uses Fira Code (see static/custom.css), so the Inter subset would either
+# render the header in a different font or 404 (static/custom_subset.css is absent).
+enable_subset = false
 
 # Enable JavaScript theme toggler to allow users to switch between dark/light mode.
 # If disabled, your site will use the theme specified in the `default_theme` variable.
@@ -114,7 +119,7 @@ show_author = false
 
 # Show the reading time of a page.
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-show_reading_time = true
+show_reading_time = false
 
 # Show the date of a page below its title.
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
@@ -237,10 +242,11 @@ invert_title_order = false
 # social_media_card = ""
 
 menu = [
-    { name = "blog", url = "blog", trailing_slash = true },
+    { name = "news", url = "blog", trailing_slash = true },
     { name = "archive", url = "archive", trailing_slash = true },
-    { name = "tags", url = "tags", trailing_slash = true },
-    { name = "projects", url = "projects", trailing_slash = true },
+    { name = "godot", url = "godot"},
+   # { name = "tags", url = "tags", trailing_slash = true },
+   # { name = "projects", url = "projects", trailing_slash = true },
 ]
 
 # The RSS icon will be shown if (1) it's enabled and (2) the following variable is set.
@@ -309,7 +315,7 @@ allowed_domains = [
     { directive = "media-src", domains = ["'self'"] },
     { directive = "script-src", domains = ["'self'"] },
     { directive = "style-src", domains = ["'self'"] },
-    { directive = "frame-src", domains = ["player.vimeo.com", "https://www.youtube-nocookie.com"] },
+    { directive = "frame-src", domains = ["player.vimeo.com", "https://www.youtube.com", "https://www.youtube-nocookie.com", "https://giphy.com"] },
 ]
 
 # Enable the CSP directives configured (or default).
