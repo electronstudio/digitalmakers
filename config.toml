@@ -1,6 +1,6 @@
 base_url = "https://electronstudio.github.io/digitalmakers"
 title = "Digital Makers"
-description = "YOUR_SITE_DESCRIPTION"
+description = "Digital Makers"
 author = "Digital Makers"
 theme = "tabi"
 generate_feeds = true
